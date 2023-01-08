@@ -5,9 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:video_player/video_player.dart';
 
-class PlayerWithControls extends StatelessWidget {
+class PlayerWithControls extends StatefulWidget {
   const PlayerWithControls({Key? key}) : super(key: key);
 
+  @override
+  State<PlayerWithControls> createState() => PlayerWithControlsState();
+}
+
+class PlayerWithControlsState extends State<PlayerWithControls> {
   @override
   Widget build(BuildContext context) {
     final ChewieController chewieController = ChewieController.of(context);
